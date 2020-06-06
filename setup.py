@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bankster", # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="Maciej Grela",
     author_email="enki@fsck.pl",
     description="Access information from financial institutions",
@@ -23,4 +23,8 @@ setuptools.setup(
         "Topic :: Office/Business :: Financial"
     ],
     python_requires='>=3.7',
+    install_requires=[
+        'selenium', 'structlog', 'requests', 'mechanicalsoup', 'beautifulsoup4',
+        'xdg'
+    ]
 )
