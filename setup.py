@@ -24,7 +24,6 @@ setuptools.setup(
     ],
     python_requires='>=3.7',
     install_requires=[
-        'selenium', 'structlog', 'requests', 'mechanicalsoup', 'beautifulsoup4',
-        'xdg'
+        'selenium', 'structlog', 'requests', 'mechanicalsoup', 'beautifulsoup4', 'xdg'
     ]
 )
