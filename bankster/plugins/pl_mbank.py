@@ -93,7 +93,7 @@ class PLMBank(object):
             }
         }).json()
 
-        self.log.log('waiting for authorization', devicename=prep_auth_data['DeviceName'])
+        self.log.msg('waiting for authorization', devicename=prep_auth_data['DeviceName'])
         while True:
             # Check the authorization status
 
@@ -101,7 +101,7 @@ class PLMBank(object):
                 'TranId': prep_auth_data['TranId']
             }).json()
 
-            self.log.log('authorization status', status=auth_status_data['Status'])
+            self.log.msg('authorization status', status=auth_status_data['Status'])
             if auth_status_data['Status'] == 'Authorized':
                 # Execute auth
                 self.s.post('/api/auth/execute', headers=self.session_headers, json={})
